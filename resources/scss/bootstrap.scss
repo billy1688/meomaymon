@@ -1,3 +1,44 @@
 // Bootstrap 5 — tai qua Vite/Sass giong cach cac he thong dang dung.
 // Tuy bien Bootstrap (bien mau, font) khai bao TRUOC dong import nay.
 @import "bootstrap/scss/bootstrap";
+
+// ===== Azinalogi UI Standard v1 — class dùng chung =====
+
+// Nút Chỉnh sửa: cam #FD7E14 (biến thể custom, không phải btn-warning).
+.btn-az-orange {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #fd7e14;
+    --bs-btn-border-color: #fd7e14;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #e56f0d;
+    --bs-btn-hover-border-color: #e56f0d;
+    --bs-btn-focus-shadow-rgb: 253, 126, 20;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #d96a0c;
+    --bs-btn-active-border-color: #d96a0c;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #fd7e14;
+    --bs-btn-disabled-border-color: #fd7e14;
+}
+
+// Header trang dùng chung: tiêu đề trái, hành động cấp trang phải.
+.az-page-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.az-page-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.az-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}

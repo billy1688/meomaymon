@@ -30,6 +30,20 @@
                         </x-nav-link>
                     @endcan
 
+                    {{-- Module Sổ việc ngoài --}}
+                    @can('soviec.view')
+                        <x-nav-link :href="route('admin.soviec.index')" :active="request()->routeIs('admin.soviec.*')">
+                            Sổ việc ngoài
+                        </x-nav-link>
+                    @endcan
+
+                    {{-- Module Yêu cầu việc --}}
+                    @can('yeucau.view')
+                        <x-nav-link :href="route('admin.yeucau.index')" :active="request()->routeIs('admin.yeucau.*')">
+                            Yêu cầu việc
+                        </x-nav-link>
+                    @endcan
+
                 </div>
             </div>
 
@@ -94,6 +108,18 @@
             @can('role.view')
                 <x-responsive-nav-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.*')">
                     Quản lý Phân quyền
+                </x-responsive-nav-link>
+            @endcan
+
+            @can('soviec.view')
+                <x-responsive-nav-link :href="route('admin.soviec.index')" :active="request()->routeIs('admin.soviec.*')">
+                    Sổ việc ngoài
+                </x-responsive-nav-link>
+            @endcan
+
+            @can('yeucau.view')
+                <x-responsive-nav-link :href="route('admin.yeucau.index')" :active="request()->routeIs('admin.yeucau.*')">
+                    Yêu cầu việc
                 </x-responsive-nav-link>
             @endcan
 

@@ -29,6 +29,7 @@ tests/Feature/<ChucNang>/          # Kiểm thử của chức năng
 - Mật khẩu giữ quy tắc mặc định của skeleton trong `AppServiceProvider` (ở production: tối thiểu 12 ký tự, gồm chữ hoa, chữ thường, chữ số, ký tự đặc biệt và kiểm tra `uncompromised`) — MỌI form đặt mật khẩu mới (đăng ký, đặt lại mật khẩu, đổi mật khẩu trong hồ sơ...) phải hiển thị dòng hướng dẫn yêu cầu này ngay dưới ô nhập mật khẩu.
 - Đăng nhập chuẩn của core là bằng **email** (theo Breeze). Đăng nhập bằng username/ID là tuỳ biến riêng của từng dự án có dữ liệu cũ (ví dụ azinalogi), KHÔNG đưa vào core.
 - Quy chuẩn giao diện là `docs/ui-standard-v1.md` (Azinalogi UI Standard v1) — một phần của core: giao diện Admin và Khách hàng của dự án đúc từ core tuân theo chuẩn này (màu nút theo ý nghĩa, header trang dùng chung, bảng, form, modal xác nhận xoá). Chuẩn chỉ quy định trình bày, không thay đổi nghiệp vụ.
+- Riêng dự án **meomaymon** (trang Mèo Máy Mon nhận việc ngoài): chỉ có 2 module nghiệp vụ là **Sổ việc ngoài** (`soviec.*`) và **Yêu cầu việc** (`yeucau.*`), mỗi module đúng 4 quyền xem/tạo/sửa/xoá. Lệ số liệu của trang: mục Sổ công khai ở trang chủ chỉ hiện các dòng sổ ở trạng thái "Đã thu" — không ghi khống, không hiện tên khách/ghi chú ra trang công khai. Trang này tách riêng với dự án becamdilam (Bé Cam); không đưa nghiệp vụ/nội dung của Bé Cam vào đây.
 - Kiểm tra code: Pint (định dạng), PHPStan level 7 (kiểu dữ liệu), Pest (test). Lệnh `composer test` chạy cả ba — phải xanh trước khi bàn giao.
 
 ## Ba quy tắc không phá

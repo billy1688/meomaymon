@@ -15,8 +15,8 @@ class RolePermissionSeeder extends Seeder
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
         // ===== Tạo Permissions =====
-        // Chỉ gồm quyền khung dùng chung. Quyền nghiệp vụ do từng dự án tự khai
-        // thêm trong seeder của dự án đó.
+        // Quyền khung dùng chung của core + quyền nghiệp vụ của dự án meomaymon.
+        // Mỗi module nghiệp vụ có đúng 4 quyền: xem / tạo / sửa / xoá.
         $permissions = [
             // User
             'user.view',
@@ -29,6 +29,18 @@ class RolePermissionSeeder extends Seeder
             'role.create',
             'role.edit',
             'role.delete',
+
+            // Module Sổ việc ngoài (dự án meomaymon)
+            'soviec.view',
+            'soviec.create',
+            'soviec.edit',
+            'soviec.delete',
+
+            // Module Yêu cầu việc (dự án meomaymon)
+            'yeucau.view',
+            'yeucau.create',
+            'yeucau.edit',
+            'yeucau.delete',
         ];
 
         foreach ($permissions as $permission) {

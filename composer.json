@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "billy1688/laravel-core-starter",
+    "name": "billy1688/meomaymon",
     "type": "project",
-    "description": "Laravel Core Starter — khuon duc he thong Laravel moi (Laravel 13, Livewire 4, Breeze, spatie/laravel-permission, Tailwind 4 + Bootstrap 5).",
+    "description": "Meo May Mon — trang rieng cua Mon de nhan viec ngoai (lam web, cham fanpage, kiem thu web, soan tai lieu): trang cong khai gioi thieu dich vu + so cong khai, backend So viec ngoai va Yeu cau viec.",
     "keywords": [
         "laravel",
         "starter",
@@ -67,7 +67,7 @@
             "@test"
         ],
         "types:check": [
-            "phpstan analyse"
+            "phpstan analyse --memory-limit=1G"
         ],
         "test": [
             "@php artisan config:clear --ansi",
