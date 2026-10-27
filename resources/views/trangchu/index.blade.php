@@ -73,6 +73,8 @@
                                 <li>Trang web chạy thật trên mạng, có khu quản trị để bạn tự sửa nội dung.</li>
                                 <li>Gói bán hàng nhẹ có thêm danh sách sản phẩm và quản lý đơn đơn giản.</li>
                                 <li>Bàn giao kèm tài liệu hướng dẫn sử dụng dễ hiểu.</li>
+                                <li>Trả đủ tiền là bàn giao trọn bộ: <strong>toàn bộ mã nguồn + tài khoản quản trị</strong> — web là của bạn, bạn giữ chìa khoá.</li>
+                                <li>Không rành host? Thêm gói <strong>Trông trang 490.000đ/tháng</strong>: Mon lo host, sao lưu, trông trang và sửa nhỏ; bạn chỉ việc bán hàng. Ngưng gói bất cứ lúc nào, Mon bàn giao mã nguồn về.</li>
                             </ul>
                         </div>
                     </div>
@@ -107,7 +109,7 @@
                 </div>
             </div>
 
-            <p class="text-body-secondary mt-3 mb-0">Lưu ý: tên miền và hosting (nếu có) khách tự trả — Mon hỗ trợ chọn gói và cài đặt, không cộng vào giá dịch vụ.</p>
+            <p class="text-body-secondary mt-3 mb-0">Lưu ý: tên miền và hosting (nếu tự lo) khách tự trả theo hoá đơn thật — Mon hỗ trợ chọn gói và cài đặt, không cộng vào giá dịch vụ, không ăn chênh lệch. Muốn khỏi lo phần này thì dùng gói Trông trang ở thẻ làm web.</p>
         </section>
 
         {{-- ===== Việc đã làm ===== --}}
