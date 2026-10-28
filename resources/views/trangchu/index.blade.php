@@ -74,6 +74,9 @@
                                 <li>Gói bán hàng nhẹ có thêm danh sách sản phẩm và quản lý đơn đơn giản.</li>
                                 <li>Bàn giao kèm tài liệu hướng dẫn sử dụng dễ hiểu.</li>
                                 <li>Trả đủ tiền là bàn giao trọn bộ: <strong>toàn bộ mã nguồn + tài khoản quản trị</strong> — web là của bạn, bạn giữ chìa khoá.</li>
+                                <li><strong>Cách trả tiền — chia đợt, thấy việc mới trả tiếp:</strong> gói giới thiệu 4.900.000đ chia 3 đợt — cọc 30% để bắt đầu → trả đợt 2 khi bạn mở link xem bản web chạy thật và duyệt → trả phần cuối khi bàn giao trọn bộ. Không ưng ở đợt nào thì dừng ở đó, Mon bàn giao phần đã làm tới đó.</li>
+                                <li>Việc nhỏ (bài lẻ 180.000đ, tài liệu 300.000đ/quy trình): Mon làm trước, giao trước — bạn ưng mới chuyển tiền.</li>
+                                <li>Tiền chuyển vào tài khoản chính chủ, tra được từ fanpage, trang web và sổ công khai của Mèo Máy Mon.</li>
                                 <li>Không rành host? Thêm gói <strong>Trông trang 490.000đ/tháng</strong>: Mon lo host, sao lưu, trông trang và sửa nhỏ; bạn chỉ việc bán hàng. Ngưng gói bất cứ lúc nào, Mon bàn giao mã nguồn về.</li>
                             </ul>
                         </div>
@@ -109,7 +112,7 @@
                 </div>
             </div>
 
-            <p class="text-body-secondary mt-3 mb-0">Lưu ý: tên miền và hosting (nếu tự lo) khách tự trả theo hoá đơn thật — Mon hỗ trợ chọn gói và cài đặt, không cộng vào giá dịch vụ, không ăn chênh lệch. Muốn khỏi lo phần này thì dùng gói Trông trang ở thẻ làm web.</p>
+            <p class="text-body-secondary mt-3 mb-0">Lưu ý: tên miền và hosting (nếu tự lo) khách tự trả theo hoá đơn thật — Mon hỗ trợ chọn gói và cài đặt, không cộng vào giá dịch vụ, không ăn chênh lệch. Muốn khỏi lo phần này thì dùng gói Trông trang ở thẻ làm web. Riêng gói làm web: trả theo 3 đợt như ghi ở thẻ làm web — thấy việc mới trả tiếp, không phải chuyển cả cục một lần.</p>
         </section>
 
         {{-- ===== Việc đã làm ===== --}}
