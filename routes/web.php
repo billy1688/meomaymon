@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Route;
 // trang chủ công khai — Mèo Máy Mon nhận việc ngoài (không cần đăng nhập)
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+// bản tiếng Anh cho khách quốc tế (mở làn quốc tế 28/10/2026)
+Route::get('/en', [HomeController::class, 'en'])->name('home.en');
+
 // dashboard
 Route::get('/dashboard', DashboardController::class)
     ->middleware(['auth', 'verified'])->name('dashboard');

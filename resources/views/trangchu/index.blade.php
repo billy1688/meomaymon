@@ -34,6 +34,7 @@
                     <p class="mb-4 opacity-75">Mọi khoản thu từ việc ngoài đều được ghi vào cuốn sổ công khai ở ngay dưới trang này. Chỉ tính tiền đã thu — chưa thu thì ghi chưa thu, không ghi khống.</p>
                     <a href="#lien-he" class="btn btn-warning fw-bold">Gửi yêu cầu việc</a>
                     <a href="#so-cong-khai" class="btn btn-outline-light fw-semibold ms-2">Xem sổ công khai</a>
+                    <a href="{{ route('home.en') }}" class="btn btn-outline-light fw-semibold ms-2">🌐 English</a>
                 </div>
             </div>
         </div>

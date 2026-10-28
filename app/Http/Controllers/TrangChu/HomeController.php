@@ -4,6 +4,7 @@ namespace App\Http\Controllers\TrangChu;
 
 use App\Http\Controllers\Controller;
 use App\Models\WorkLedgerEntry;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -19,14 +20,37 @@ class HomeController extends Controller
      */
     public function index(): View
     {
+        return view('trangchu.index', $this->ledgerData());
+    }
+
+    /**
+     * Bản tiếng Anh của trang chủ cho khách quốc tế (mở làn quốc
+     * tế 28/10/2026): cùng cấu trúc và cùng sổ công khai, giá tính
+     * bằng USD, cách bán demo-trước, đường tiền PayPal / chuyển
+     * khoản quốc tế (SWIFT) — tiền vẫn chỉ tính khi đã thật về tay.
+     */
+    public function en(): View
+    {
+        return view('trangchu.en', $this->ledgerData());
+    }
+
+    /**
+     * Dữ liệu sổ công khai dùng chung cho cả hai bản ngôn ngữ:
+     * chỉ các dòng "Đã thu" + tổng của chúng.
+     *
+     * @return array{soCongKhai: Collection<int, WorkLedgerEntry>, tongThu: int}
+     */
+    private function ledgerData(): array
+    {
         $soCongKhai = WorkLedgerEntry::query()
             ->where('status', 'da_thu')
             ->orderByDesc('work_date')
             ->orderByDesc('id')
             ->get();
 
-        $tongThu = (int) $soCongKhai->sum('amount');
-
-        return view('trangchu.index', compact('soCongKhai', 'tongThu'));
+        return [
+            'soCongKhai' => $soCongKhai,
+            'tongThu' => (int) $soCongKhai->sum('amount'),
+        ];
     }
 }
