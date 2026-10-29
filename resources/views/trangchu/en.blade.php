@@ -192,6 +192,8 @@
                     </div>
                 </div>
             @endif
+
+            <p class="small text-body-secondary mt-3 mb-0">👁 {{ number_format($tongLuotXem, 0, ',', '.') }} visits</p>
         </section>
 
         {{-- ===== Contact ===== --}}

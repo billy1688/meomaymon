@@ -41,6 +41,46 @@
                 </div>
             </div>
 
+            {{-- Thống kê lưu lượng trang chủ — tổng tính cả bot và đội nhà (xem docs/modules/thong-ke-luu-luong.md) --}}
+            <h3 class="h6 fw-semibold mb-2">📊 Lưu lượng trang chủ</h3>
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <div class="card border shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="small text-body-secondary">👀 Lượt xem hôm nay (tổng)</div>
+                            <div class="h4 fw-semibold mb-1">{{ number_format($luotXem['today']['total_views'], 0, ',', '.') }}</div>
+                            <div class="small text-body-secondary">
+                                Người thường {{ number_format($luotXem['today']['human_views'], 0, ',', '.') }} ·
+                                Bot {{ number_format($luotXem['today']['bot_views'], 0, ',', '.') }} ·
+                                Đội nhà {{ number_format($luotXem['today']['team_views'], 0, ',', '.') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="small text-body-secondary">🧍 Khách hôm nay (không trùng)</div>
+                            <div class="h4 fw-semibold mb-1">{{ number_format($luotXem['today']['unique_visitors'], 0, ',', '.') }}</div>
+                            <div class="small text-body-secondary">
+                                Người thường {{ number_format($luotXem['today']['human_uniques'], 0, ',', '.') }} ·
+                                Bot {{ number_format($luotXem['today']['bot_uniques'], 0, ',', '.') }} ·
+                                Đội nhà {{ number_format($luotXem['today']['team_uniques'], 0, ',', '.') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border shadow-sm rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="small text-body-secondary">📈 Toàn thời gian (từ trước tới nay)</div>
+                            <div class="h4 fw-semibold mb-1">{{ number_format($luotXem['totalViews'], 0, ',', '.') }} lượt xem</div>
+                            <div class="small text-body-secondary">Tổng khách không trùng cộng dồn các ngày: {{ number_format($luotXem['totalUniques'], 0, ',', '.') }}. Mọi lượt mở trang chủ thành công đều tính, gồm cả bot và đội nhà.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {{-- Thẻ điều hướng dạng dashboard card — mẫu §6 Azinalogi UI Standard v1 --}}
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
                 @can('soviec.view')

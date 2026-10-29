@@ -197,6 +197,8 @@
                     </div>
                 </div>
             @endif
+
+            <p class="small text-body-secondary mt-3 mb-0">👁 {{ number_format($tongLuotXem, 0, ',', '.') }} lượt ghé thăm</p>
         </section>
 
         {{-- ===== Liên hệ / gửi yêu cầu việc ===== --}}

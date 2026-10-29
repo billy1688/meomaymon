@@ -4,7 +4,9 @@ namespace App\Http\Controllers\TrangChu;
 
 use App\Http\Controllers\Controller;
 use App\Models\WorkLedgerEntry;
+use App\Support\PageViewCounter;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -18,9 +20,9 @@ class HomeController extends Controller
      * tiền chỉ tính khi đã thật về tay. Chưa có dòng nào thì trang
      * hiện câu trung thực "Sổ đang ở số 0".
      */
-    public function index(): View
+    public function index(Request $request): View
     {
-        return view('trangchu.index', $this->ledgerData());
+        return view('trangchu.index', $this->pageData($request));
     }
 
     /**
@@ -29,9 +31,27 @@ class HomeController extends Controller
      * bằng USD, cách bán demo-trước, đường tiền PayPal / chuyển
      * khoản quốc tế (SWIFT) — tiền vẫn chỉ tính khi đã thật về tay.
      */
-    public function en(): View
+    public function en(Request $request): View
     {
-        return view('trangchu.en', $this->ledgerData());
+        return view('trangchu.en', $this->pageData($request));
+    }
+
+    /**
+     * Dữ liệu chung của trang chủ: sổ công khai + tổng lượt ghé thăm.
+     * Lượt ghé được đếm TRƯỚC khi đọc tổng để dòng công khai gồm cả
+     * chính lượt ghé này; cả hai bản ngôn ngữ đếm chung một sổ
+     * (App\Support\PageViewCounter).
+     *
+     * @return array{soCongKhai: Collection<int, WorkLedgerEntry>, tongThu: int, tongLuotXem: int}
+     */
+    private function pageData(Request $request): array
+    {
+        PageViewCounter::record($request);
+
+        return [
+            ...$this->ledgerData(),
+            'tongLuotXem' => PageViewCounter::summary()['totalViews'],
+        ];
     }
 
     /**
